@@ -1,0 +1,158 @@
+{
+  "f": {
+    "cfg_fs": "16px",
+    "nome": "Orion",
+    "idade": "18",
+    "raca": "Humano (Reencarnado)",
+    "classe": "Ferreiro Estelar",
+    "altura": "1,95",
+    "a_Força": "1",
+    "a_Destreza": "10",
+    "a_Constituição": "8",
+    "a_Carisma": "2",
+    "a_Sabedoria": "8",
+    "a_Inteligência": "0",
+    "a_Fratura": "4",
+    "a_Deslocamento": "6m",
+    "marca": "2 marcas e morte profanada",
+    "r_vida_a": "31",
+    "r_vida_m": "77",
+    "r_san_a": "70",
+    "r_san_m": "80",
+    "r_mana_a": "1",
+    "r_mana_m": "190",
+    "r_vig_a": "130",
+    "r_vig_m": "130",
+    "r_con_a": "12",
+    "r_con_m": "12",
+    "r_esp_a": "16",
+    "r_esp_m": "16",
+    "r_esq_a": "2",
+    "r_esq_m": "3",
+    "r_ca": "18",
+    "m_Ouro": "18",
+    "m_Prata": "0",
+    "m_Cobre": "0",
+    "capacidade": "10",
+    "nivel": "5",
+    "xp": "0"
+  },
+  "l": {
+    "habilidades": [
+      {
+        "nivel": "Nível 1",
+        "nome": "Ferro estelar",
+        "tipo": "Passiva",
+        "custo": "10",
+        "descricao": " 1 vez no dia pode moldar os próprios raios de sol em um lingote de ferro, durante o dia a arma da 1d4 de dano extra e durante a noite 1d4 a menos.",
+        "efeitos": "Criar um minério que adiciona 1d4 de dano de dia e menos 1d4 de noite",
+        "obs": "Pode ser misturado com outros"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Conhecimento Melhorado",
+        "tipo": "Passiva",
+        "custo": "0",
+        "descricao": "O ferreiro estelar consegue discernir os materiás usados em itens que ele ver apenas olhando",
+        "efeitos": "Identificar os itens"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Processar Elemento",
+        "tipo": "Ativa",
+        "custo": "50 de mana",
+        "descricao": "O ferreiro estelar consegue processar os itens de forma magica assim conseguindo material superior sem a necessidade de esperar. ",
+        "efeitos": "Crie um material superior do inferior. \n\nEx: Couro batido -> Pele de animal",
+        "obs": "Não é possível extrair essência de flores"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Evolução belica",
+        "tipo": "Passiva",
+        "custo": "0",
+        "descricao": "O ferreiro estelar consegue melhorara qualidade das armas e armaduras com mais eficiência.\n",
+        "efeitos": "Melhora o nível de armas e armaduras em +1 até +5",
+        "obs": "Rode d100"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Área de forja",
+        "tipo": "Ativa",
+        "custo": "0",
+        "descricao": "O usuário é capaz de entrar uma área reservada do seu inventario onde lá terá uma forja, martelo, carvão de baixa qualidade, pedra de amolar, mesa de projeto. \nLá dentro devido a influência de aurelios é materializado a forma da alma do usuário o que pode resultar em mudanças do corpo.",
+        "efeitos": "Cria uma área no inventario onde eu ganho uma forja fisica.",
+        "obs": "Como é materializado a alma do usuário"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Armamento Mágico ",
+        "descricao": "Armamento Mágico \nCapacidades\nO usuário é capaz de criar armas mágicas ou de ser possuidor delas, usando-as em combate para favorecê-lo ofensiva e defensivamente. Por serem armas, elas concedem um uso facilitado de capacidades mágicas a guerreiros hábeis em usá-las, mesmo que eles não possuam um nível de domínio místico tão grande. As armas podem possuir as mais diversas formas: espadas, escudos, arcos, lanças, etc., combinando o combate físico ao mágico.\n",
+        "obs": "a força da arma criada e efeito aumenta de acordo com o meu entendimento sobre a mesma arma que for criada\n",
+        "efeitos": "Escudos: x*2 De mana para mana física\nx*4 para perfurante e necrótico\n-Armas de haste 1d8x5+1d4\n-Espada curta: 1d6x5+1d4\n-Espada Longa: 1d10x5+1d4\n-Greatsword e martelos de guerra: 1d12x5+1d4\n-Arco curto: 1d8x5+1d4\n-Arco longo: 1d12x5+1d4\n-Besta: 1d8x5+1d6\n-Adaga: 1d4x5 + 1d4\n-Kunai / faca de arremesso: 1d4x5 + 1d6 \n-Espada curva (tipo cimitarra): 1d6x5+1d4\n-Machado de batalha → 1d10x5 + 1d4\n-Machado duplo: 1d6x5 + 1d6- *Efeito*: Caso acerte um ataque pode tentar acertar outro\n-Arremesso (lanças de arremeço/javelin): 1d8x5 + 1d4\n-Chakram / lâmina circular → 1d10x5 + 1d6-Efeito caso arremesse volta em sua direção, é necessário um teste de destreza DT 10+ sua destreza, se não passar recebe metade do dano da arma.\n-Corrente / kusarigama: 1d6x5 + 1d6 3m de acerto\n-Foice: 1d6x5 + 1d6- *Efeito:* chance de hemorragia: Inimigo faz um teste DT 10+destreza, se não passar recebe 1d4 de sangramento.\n-Lança longa (pique): 1d10x5 + 1d4 2.5m de acerto\n"
+      }
+    ],
+    "inv": [
+      {
+        "cat": "Itens",
+        "tam": "Grande",
+        "nome": "Essência de lótus de gelo",
+        "qtd": "1",
+        "desc": "Uma flor que nunca murcha, mesmo no frio extremo. Consumir suas pétalas confere resistência a dano de gelo por 1h.\n",
+        "area": "Essência de lótus de gelo"
+      },
+      {
+        "cat": "Outros",
+        "tam": "Grande",
+        "nome": "Cervo",
+        "area": "cervo morto",
+        "qtd": "1",
+        "desc": "1 cervo morto"
+      }
+    ],
+    "armas": [
+      {
+        "nome": "Machado de lenhador",
+        "tipo": "Cortante",
+        "dano": "1d6",
+        "alcance": "1.5m",
+        "custo": "0",
+        "peso": "2quilo",
+        "descricao": "Um machado gasto que Orion usa desde pequeno era usado para cortar lenha mas Orion percebeu que ele é ótimo para caçar lobos",
+        "efeito": "Sangramento"
+      }
+    ],
+    "especiais": [
+      {
+        "nome": "Sistema Nemesis (A Malícia do Autor)",
+        "tipo": "Passiva",
+        "custo": "0",
+        "descricao": "Uma marca de dificuldade extrema imposta por \"Aurélio Sol”. Esta habilidade transforma a existência do usuário em um teste de resistência pura, removendo todas as proteções que o sistema normalmente ofereceria a um \"protagonista\" em troca de um potencial de recompensa transcendente no futuro.\nEfeitos da Habilidade (Modificadores de Sistema):\nVazio de Protagonismo: O usuário perde permanentemente o Privilégio de Protagonista. \nNão há proteções narrativas ou \"sorte do destino\" que impeçam a morte definitiva em situações fatais fora de combate.\nO sistema não fornece auxílios, bônus de experiência compartilhada ou suportes de interface para aliados.\n",
+        "efeitos": "\nRestrição de Utilidade:\nMapa desbloqueado: Consegue abrir um mapa e observar locais e estruturas como um mapa de cima.\nIncapaz de detectar inimigos-desbloqueia no nível 5 a capacidade de detectar inimigos de nível igual ou inferior em um raio de 1km\n\nCarga Precária: O inventário é limitado e o Privilégio de \"Vida Boa\" (recursos iniciais de conforto) foi totalmente retirado, forçando o início em pobreza extrema.\n\nLei do Alto Risco: Como compensação por viver sob o modo de dificuldade mais alto (\"Precário\"), o usuário ganha acesso ao maior escalão de recompensas e evolução física/mental disponíveis, caso sobreviva aos obstáculos impostos..\n"
+      },
+      {
+        "nome": "Voluntas siderum",
+        "tipo": "Ativa",
+        "descricao": "O usuário é capaz de mover, levitar ou destruir qualquer coisa com o poder da mente, além de poder, por exemplo, causar impacto com ondas\ntelecinéticas, causar asfixia em oponentes ou se proteger de grandes\nimpactos.\n",
+        "recurso": "Toda energia",
+        "custo": "10%, 25%, 50%",
+        "efeitos": "10% para objeto pequeno\n25% para médios\n50% para grandes\n",
+        "obs": "Ativa permanentemente para objetos pequenos"
+      }
+    ],
+    "notas": [
+      {
+        "titulo": "Lua sangrenta",
+        "texto": "Quando a lua sangrenta tocar o céu e a névoa envolver a floresta esquecida, o Caminhante de Ossos deverá traçar o Círculo do Lamento com sangue vivo. Apenas então o Guardião das Sombras poderá despert"
+      },
+      {
+        "titulo": "Poema",
+        "texto": "Lobis, que vagueia entre a carne e a sombra, escuta o chamado que rasga os véus do mundo. Traz a fúria que dorme no âmago da noite, Marca o teu nome na carne que sangra, e surge\n"
+      },
+      {
+        "titulo": "draisho"
+      }
+    ],
+    "custom": [],
+    "locais": []
+  }
+}

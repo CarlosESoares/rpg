@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="pt-BR" style="font-size: 16px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha de RPG Digital</title>
+<style>
+:root{--bg:#0e0d0c;--p:#1a1816;--p2:#24211e;--red:#8c1c1c;--red2:#c23030;--gold:#c9a24b;--txt:#e9e2d0;--mut:#9a927f;--ln:#4a4338}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{margin:0;background:radial-gradient(circle at 30% 0,#1d1512,var(--bg) 60%);color:var(--txt);font-family:Georgia,"Palatino Linotype",serif;line-height:1.4}
+#top{position:fixed;top:0;left:0;right:0;height:48px;background:#0a0908;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:6px;padding:0 10px;z-index:20;flex-wrap:nowrap;overflow-x:auto}
+#top .ti{color:var(--gold);font-weight:bold;letter-spacing:2px;margin-right:8px;white-space:nowrap}
+#st{margin-left:auto;font-size:.85rem;color:var(--gold);white-space:nowrap}
+#st.d{color:#e08a3c}#st.e{color:var(--red2)}
+button,.b{font:inherit;font-size:.85rem;background:linear-gradient(#3a1414,var(--red));color:#f3e6c4;border:1px solid var(--gold);border-radius:3px;padding:5px 10px;cursor:pointer;white-space:nowrap}
+button:hover,.b:hover{background:linear-gradient(#531a1a,var(--red2))}
+#nav{position:fixed;top:48px;bottom:0;left:0;width:215px;background:#12100f;border-right:1px solid var(--gold);padding:10px 0;overflow-y:auto;z-index:15;transition:transform .2s}
+#nav a{display:block;padding:8px 16px;color:var(--txt);text-decoration:none;cursor:pointer;border-left:3px solid transparent}
+#nav a:hover{background:var(--p2);border-left-color:var(--red2);color:var(--gold)}
+#menu{display:none}
+main{margin:48px 0 0 215px;padding:20px 24px 80px;max-width:1500px}
+body.nonav #nav{transform:translateX(-100%)}body.nonav main{margin-left:0}
+section{background:var(--p);border:1px solid var(--gold);outline:1px solid var(--ln);outline-offset:3px;border-radius:4px;padding:16px 18px;margin:0 0 26px;scroll-margin-top:62px;position:relative}
+section>h2{margin:0 0 14px;color:var(--gold);font-size:1.35rem;letter-spacing:1px;border-bottom:1px solid var(--red);padding-bottom:6px;display:flex;align-items:center;gap:10px}
+section>h2 .b{margin-left:auto}
+h3{color:var(--red2);margin:16px 0 8px;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+h3 small{color:var(--mut)}h3 .b{margin-left:auto}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+label{display:block;font-size:.78rem;color:var(--mut)}
+label.w{grid-column:1/-1}
+input,textarea,select{width:100%;background:#0c0b0a;color:var(--txt);border:1px solid var(--ln);border-radius:3px;padding:6px 8px;font:inherit;font-size:.95rem;margin-top:2px}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+textarea{resize:vertical;min-height:64px}
+input[type=checkbox]{width:22px;height:22px;display:block}
+.lst{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.card{background:var(--p2);border:1px solid var(--ln);border-left:4px solid var(--red);border-radius:3px;padding:10px;position:relative}
+.card .fg{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.card .x{float:right;margin:0 0 6px 6px;padding:2px 8px}
+.ig .card{border:2px solid var(--gold);background:#1e1b17}
+.ig .z1{grid-column:span 2}.ig .z2{grid-column:span 2;grid-row:span 2}
+.ig .z2 textarea.ar{min-height:150px}
+.s1{border-left-color:#d49a2a}.s2{border-left-color:#3f9a4a;opacity:.75}.s3{border-left-color:#555;opacity:.6}
+.em{color:var(--mut);font-style:italic;margin:6px 0}
+.attr,.res{background:var(--p2);border:1px solid var(--gold);border-radius:4px;padding:8px;text-align:center}
+.attr b,.res b{color:var(--gold);display:block}
+.attr input{font-size:1.8rem;text-align:center;font-weight:bold}
+.res .v{display:flex;gap:4px;align-items:center}
+.res .v input{text-align:center;font-size:1.3rem;font-weight:bold;margin:0}
+.res .v button{padding:6px 9px}
+.bar{height:7px;background:#000;border:1px solid var(--ln);margin-top:6px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#5a1010,var(--red2))}
+.coins{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:10px}
+.hint{font-size:.85rem;color:var(--mut);margin:0 0 10px}
+@media(max-width:800px){#nav{transform:translateX(-100%)}body.open #nav{transform:none}main{margin-left:0;padding:14px 10px 80px}#menu{display:block}.ig .z1,.ig .z2{grid-column:span 1}}
+</style>
+</head>
+<body>
+<div id="top">
+<button id="menu" onclick="document.body.classList.toggle(&#39;open&#39;)">☰</button>
+<span class="ti">✠ FICHA DE RPG</span>
+<button id="bSave">💾 Salvar</button><button id="bLoad">↻ Recarregar dados</button><button id="bClear">🗑 Limpar ficha</button><button id="bExp">📤 Exportar ficha</button><label class="b" style="margin:0;color:#f3e6c4;font-size:.85rem">📥 Importar ficha<input type="file" id="fImp" accept=".json,application/json" hidden=""></label>
+<span id="st" class="">✓ Salvo</span>
+</div>
+<nav id="nav"><a data-nav="personagem">🧑 Personagem</a><a data-nav="atributos">⚔ Atributos</a><a data-nav="recursos">♥ Recursos</a><a data-nav="habilidades">✦ Habilidades</a><a data-nav="inventario">🎒 Inventário</a><a data-nav="armas">⚔ Armas</a><a data-nav="equipamentos">🛡 Equipamentos</a><a data-nav="especiais">☠ Habilidades especiais</a><a data-nav="missoes">📜 Missões</a><a data-nav="npcs">👤 NPCs</a><a data-nav="locais">🗺 Locais</a><a data-nav="diario">📖 Diário</a><a data-nav="notas">📝 Anotações</a><a data-nav="custom">🧩 Campos personalizados</a><a data-nav="config">⚙ Configurações</a></nav>
+<main id="main"><section id="personagem"><h2>🧑 Personagem</h2><div class="fg"><label>Nome<input data-k="nome"></label><label>Idade<input data-k="idade"></label><label>Raça<input data-k="raca"></label><label>Classe<input data-k="classe"></label><label>Altura<input data-k="altura"></label><label>Nível<input data-k="nivel"></label><label>Experiência<input data-k="xp"></label></div><div class="fg" style="margin-top:10px"><label>Aparência<textarea data-k="aparencia" rows="4"></textarea></label><label>Personalidade<textarea data-k="personalidade" rows="4"></textarea></label><label>História<textarea data-k="historia" rows="4"></textarea></label><label>Objetivos<textarea data-k="objetivos" rows="4"></textarea></label></div></section><section id="atributos"><h2>⚔ Atributos</h2><div class="fg"><div class="attr"><b>Força</b><input data-k="a_Força"></div><div class="attr"><b>Destreza</b><input data-k="a_Destreza"></div><div class="attr"><b>Constituição</b><input data-k="a_Constituição"></div><div class="attr"><b>Carisma</b><input data-k="a_Carisma"></div><div class="attr"><b>Sabedoria</b><input data-k="a_Sabedoria"></div><div class="attr"><b>Inteligência</b><input data-k="a_Inteligência"></div><div class="attr"><b>Fratura</b><input data-k="a_Fratura"></div><div class="attr"><b>Deslocamento</b><input data-k="a_Deslocamento"></div></div><div class="fg" style="margin-top:10px"><label>Marca da morte<textarea data-k="marca" rows="4"></textarea></label></div></section><section id="recursos"><h2>♥ Recursos</h2><div class="fg"><div class="res"><b>♥ Vida</b><div class="v"><button data-adj="r_vida_a" data-d="-1">−</button><input data-k="r_vida_a" inputmode="numeric"><span>/</span><input data-k="r_vida_m" inputmode="numeric"><button data-adj="r_vida_a" data-d="1">+</button></div><div class="bar"><i data-bar="vida" style="width: 40.2597%;"></i></div></div><div class="res"><b>☽ Sanidade</b><div class="v"><button data-adj="r_san_a" data-d="-1">−</button><input data-k="r_san_a" inputmode="numeric"><span>/</span><input data-k="r_san_m" inputmode="numeric"><button data-adj="r_san_a" data-d="1">+</button></div><div class="bar"><i data-bar="san" style="width: 87.5%;"></i></div></div><div class="res"><b>✧ Mana</b><div class="v"><button data-adj="r_mana_a" data-d="-1">−</button><input data-k="r_mana_a" inputmode="numeric"><span>/</span><input data-k="r_mana_m" inputmode="numeric"><button data-adj="r_mana_a" data-d="1">+</button></div><div class="bar"><i data-bar="mana" style="width: 0.526316%;"></i></div></div><div class="res"><b>⚡ Vigor</b><div class="v"><button data-adj="r_vig_a" data-d="-1">−</button><input data-k="r_vig_a" inputmode="numeric"><span>/</span><input data-k="r_vig_m" inputmode="numeric"><button data-adj="r_vig_a" data-d="1">+</button></div><div class="bar"><i data-bar="vig" style="width: 100%;"></i></div></div><div class="res"><b>◎ Pontos de concentração</b><div class="v"><button data-adj="r_con_a" data-d="-1">−</button><input data-k="r_con_a" inputmode="numeric"><span>/</span><input data-k="r_con_m" inputmode="numeric"><button data-adj="r_con_a" data-d="1">+</button></div><div class="bar"><i data-bar="con" style="width: 100%;"></i></div></div><div class="res"><b>☸ Pontos espirituais</b><div class="v"><button data-adj="r_esp_a" data-d="-1">−</button><input data-k="r_esp_a" inputmode="numeric"><span>/</span><input data-k="r_esp_m" inputmode="numeric"><button data-adj="r_esp_a" data-d="1">+</button></div><div class="bar"><i data-bar="esp" style="width: 100%;"></i></div></div><div class="res"><b>➶ Pontos de esquiva</b><div class="v"><button data-adj="r_esq_a" data-d="-1">−</button><input data-k="r_esq_a" inputmode="numeric"><span>/</span><input data-k="r_esq_m" inputmode="numeric"><button data-adj="r_esq_a" data-d="1">+</button></div><div class="bar"><i data-bar="esq" style="width: 66.6667%;"></i></div></div><div class="res"><b>🛡 CA</b><div class="v"><input data-k="r_ca"></div></div></div></section><section id="habilidades"><h2>✦ Habilidades<button class="b" data-add="habilidades">➕ Adicionar habilidade</button></h2><p class="hint">As habilidades ficam agrupadas pelo campo Nível. Mude o nível no seletor para movê-la de grupo.</p><div id="c-habilidades"><h3>Nível 1 <small>(7)</small></h3><div class="lst"><div class="card " data-l="habilidades" data-i="0"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Ferro estelar"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value="Passiva"></label><label class="">Custo<input data-f="custo" type="text" value="10"></label><label class="w">Descrição<textarea data-f="descricao" rows="3"> 1 vez no dia pode moldar os próprios raios de sol em um lingote de ferro, durante o dia a arma da 1d4 de dano extra e durante a noite 1d4 a menos.</textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">Criar um minério que adiciona 1d4 de dano de dia e menos 1d4 de noite</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3">Pode ser misturado com outros</textarea></label></div></div><div class="card " data-l="habilidades" data-i="1"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Conhecimento Melhorado"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value="Passiva"></label><label class="">Custo<input data-f="custo" type="text" value="0"></label><label class="w">Descrição<textarea data-f="descricao" rows="3">O ferreiro estelar consegue discernir os materiás usados em itens que ele ver apenas olhando</textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">Identificar os itens</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3"></textarea></label></div></div><div class="card " data-l="habilidades" data-i="2"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Processar Elemento"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value="Ativa"></label><label class="">Custo<input data-f="custo" type="text" value="50 de mana"></label><label class="w">Descrição<textarea data-f="descricao" rows="3">O ferreiro estelar consegue processar os itens de forma magica assim conseguindo material superior sem a necessidade de esperar. </textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">Crie um material superior do inferior. 
+
+Ex: Couro batido -&gt; Pele de animal</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3">Não é possível extrair essência de flores</textarea></label></div></div><div class="card " data-l="habilidades" data-i="3"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Evolução belica"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value="Passiva"></label><label class="">Custo<input data-f="custo" type="text" value="0"></label><label class="w">Descrição<textarea data-f="descricao" rows="3">O ferreiro estelar consegue melhorara qualidade das armas e armaduras com mais eficiência.
+</textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">Melhora o nível de armas e armaduras em +1 até +5</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3">Rode d100</textarea></label></div></div><div class="card " data-l="habilidades" data-i="4"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Voluntas siderum"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value=""></label><label class="">Custo<input data-f="custo" type="text" value=""></label><label class="w">Descrição<textarea data-f="descricao" rows="3">O usuário é capaz de mover, levitar ou destruir qualquer coisa com o poder da mente, além de poder, por exemplo, causar impacto com ondas
+telecinéticas, causar asfixia em oponentes ou se proteger de grandes
+impactos.
+</textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">10% para objeto pequeno
+25% para médios
+50% para grandes
+</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3">Ativa permanente objetos pequenos</textarea></label></div></div><div class="card " data-l="habilidades" data-i="5"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value="Área de forja"></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value="Ativa"></label><label class="">Custo<input data-f="custo" type="text" value="0"></label><label class="w">Descrição<textarea data-f="descricao" rows="3">O usuário é capaz de entrar uma área reservada do seu inventario onde lá terá uma forja, martelo, carvão de baixa qualidade, pedra de amolar, mesa de projeto. 
+Lá dentro devido a influência de aurelios é materializado a forma da alma do usuário o que pode resultar em mudanças do corpo.</textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3">Cria uma área no inventario onde eu ganho uma forja fisica.</textarea></label><label class="w">Observações<textarea data-f="obs" rows="3">Como é materializado a alma do usuário</textarea></label></div></div><div class="card " data-l="habilidades" data-i="6"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value=""></label><label class="">Nível<select data-f="nivel"><option selected="">Nível 1</option><option>Nível 2</option><option>Nível 3</option><option>Nível 4</option><option>Nível 5</option><option>Nível 6</option><option>Nível 7</option><option>Nível 8</option><option>Nível 9</option><option>Habilidade especial</option><option>Habilidade inata</option><option>Passiva</option></select></label><label class="">Tipo<input data-f="tipo" type="text" value=""></label><label class="">Custo<input data-f="custo" type="text" value=""></label><label class="w">Descrição<textarea data-f="descricao" rows="3"></textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3"></textarea></label><label class="w">Observações<textarea data-f="obs" rows="3"></textarea></label></div></div></div></div></section><section id="inventario"><h2>🎒 Inventário</h2><h3>Moedas</h3><div class="coins"><label>Ouro<input data-k="m_Ouro"></label><label>Prata<input data-k="m_Prata"></label><label>Cobre<input data-k="m_Cobre"></label></div><div id="c-moedas"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div><div style="margin:10px 0"><button data-add="moedas">➕ Adicionar moeda</button></div><div class="fg" style="margin:10px 0"><label>Capacidade do inventário<input data-k="capacidade"></label></div><div id="c-inv"><h3>Equipamentos <small>(0)</small><button class="b" data-add="inv" data-g="Equipamentos">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Armas <small>(0)</small><button class="b" data-add="inv" data-g="Armas">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Armaduras <small>(0)</small><button class="b" data-add="inv" data-g="Armaduras">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Itens <small>(1)</small><button class="b" data-add="inv" data-g="Itens">➕ Adicionar slot</button></h3><div class="ig"><div class="card z2" data-l="inv" data-i="0"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="w">Escreva ou desenhe o item<textarea data-f="area" rows="3" class="ar"></textarea></label><label class="">Nome do item<input data-f="nome" type="text" value="Essência de lótus de gelo"></label><label class="">Qtd.<input data-f="qtd" type="number" value="1"></label><label class="">Categoria<select data-f="cat"><option>Equipamentos</option><option>Armas</option><option>Armaduras</option><option selected="">Itens</option><option>Itens mágicos</option><option>Consumíveis</option><option>Materiais</option><option>Quest / Missão</option><option>Itens especiais</option><option>Outros</option></select></label><label class="">Tamanho do slot<select data-f="tam"><option>Pequeno</option><option>Médio</option><option selected="">Grande</option></select></label><label class="w">Descrição<textarea data-f="desc" rows="3">Uma flor que nunca murcha, mesmo no frio extremo. Consumir suas pétalas confere resistência a dano de gelo por 1h.
+</textarea></label></div></div></div><h3>Itens mágicos <small>(0)</small><button class="b" data-add="inv" data-g="Itens mágicos">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Consumíveis <small>(0)</small><button class="b" data-add="inv" data-g="Consumíveis">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Materiais <small>(0)</small><button class="b" data-add="inv" data-g="Materiais">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Quest / Missão <small>(0)</small><button class="b" data-add="inv" data-g="Quest / Missão">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Itens especiais <small>(0)</small><button class="b" data-add="inv" data-g="Itens especiais">➕ Adicionar slot</button></h3><div class="ig"></div><h3>Outros <small>(1)</small><button class="b" data-add="inv" data-g="Outros">➕ Adicionar slot</button></h3><div class="ig"><div class="card z2" data-l="inv" data-i="1"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="w">Escreva ou desenhe o item<textarea data-f="area" rows="3" class="ar">cervo morto</textarea></label><label class="">Nome do item<input data-f="nome" type="text" value="Cervo"></label><label class="">Qtd.<input data-f="qtd" type="number" value="1"></label><label class="">Categoria<select data-f="cat"><option>Equipamentos</option><option>Armas</option><option>Armaduras</option><option>Itens</option><option>Itens mágicos</option><option>Consumíveis</option><option>Materiais</option><option>Quest / Missão</option><option>Itens especiais</option><option selected="">Outros</option></select></label><label class="">Tamanho do slot<select data-f="tam"><option>Pequeno</option><option>Médio</option><option selected="">Grande</option></select></label><label class="w">Descrição<textarea data-f="desc" rows="3"></textarea></label></div></div></div></div></section><section id="armas"><h2>⚔ Armas<button class="b" data-add="armas">➕ Adicionar arma</button></h2><div id="c-armas"><div class="lst"><div class="card " data-l="armas" data-i="0"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value=""></label><label class="">Tipo<input data-f="tipo" type="text" value=""></label><label class="">Dano<input data-f="dano" type="text" value=""></label><label class="">Alcance<input data-f="alcance" type="text" value=""></label><label class="">Efeito<input data-f="efeito" type="text" value=""></label><label class="">Peso<input data-f="peso" type="text" value=""></label><label class="">Custo<input data-f="custo" type="text" value=""></label><label class="w">Descrição<textarea data-f="descricao" rows="3"></textarea></label><label class="w">Observações<textarea data-f="obs" rows="3"></textarea></label></div></div></div></div></section><section id="equipamentos"><h2>🛡 Equipamentos<button class="b" data-add="equip">➕ Adicionar equipamento</button></h2><div id="c-equip"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="especiais"><h2>☠ Habilidades especiais<button class="b" data-add="especiais">➕ Adicionar habilidade especial</button></h2><p class="hint">Sistemas únicos do personagem (ex.: Sistema Nemesis, habilidades inatas de regras próprias).</p><div id="c-especiais"><div class="lst"><div class="card " data-l="especiais" data-i="0"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Nome<input data-f="nome" type="text" value=""></label><label class="">Tipo<input data-f="tipo" type="text" value=""></label><label class="">Custo<input data-f="custo" type="text" value=""></label><label class="">Recurso<input data-f="recurso" type="text" value=""></label><label class="w">Descrição<textarea data-f="descricao" rows="3"></textarea></label><label class="w">Efeitos<textarea data-f="efeitos" rows="3"></textarea></label><label class="w">Observações<textarea data-f="obs" rows="3"></textarea></label></div></div></div></div></section><section id="missoes"><h2>📜 Missões<button class="b" data-add="missoes">➕ Nova missão</button></h2><div id="c-missoes"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="npcs"><h2>👤 NPCs<button class="b" data-add="npcs">➕ Adicionar NPC</button></h2><div id="c-npcs"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="locais"><h2>🗺 Locais<button class="b" data-add="locais">➕ Adicionar local</button></h2><div id="c-locais"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="diario"><h2>📖 Diário<button class="b" data-add="diario">➕ Nova entrada</button></h2><div id="c-diario"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="notas"><h2>📝 Anotações<button class="b" data-add="notas">➕ Nova anotação</button></h2><div id="c-notas"><div class="lst"><div class="card " data-l="notas" data-i="0"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Título<input data-f="titulo" type="text" value="Lua sangrenta"></label><label class="">Data (opcional)<input data-f="data" type="date" value=""></label><label class="w">Texto<textarea data-f="texto" rows="3">Quando a lua sangrenta tocar o céu e a névoa envolver a floresta esquecida, o Caminhante de Ossos deverá traçar o Círculo do Lamento com sangue vivo. Apenas então o Guardião das Sombras poderá despert</textarea></label></div></div><div class="card " data-l="notas" data-i="1"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Título<input data-f="titulo" type="text" value="Poema"></label><label class="">Data (opcional)<input data-f="data" type="date" value=""></label><label class="w">Texto<textarea data-f="texto" rows="3">Lobis, que vagueia entre a carne e a sombra, escuta o chamado que rasga os véus do mundo. Traz a fúria que dorme no âmago da noite, Marca o teu nome na carne que sangra, e surge
+</textarea></label></div></div><div class="card " data-l="notas" data-i="2"><button class="x" data-rm="">🗑 Remover</button><div class="fg"><label class="">Título<input data-f="titulo" type="text" value=""></label><label class="">Data (opcional)<input data-f="data" type="date" value=""></label><label class="w">Texto<textarea data-f="texto" rows="3"></textarea></label></div></div></div></div></section><section id="custom"><h2>🧩 Campos personalizados<button class="b" data-add="custom">➕ Adicionar campo personalizado</button></h2><p class="hint">Crie campos para regras próprias que não existem na ficha.</p><div id="c-custom"><div class="lst"></div><p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p></div></section><section id="config"><h2>⚙ Configurações</h2><div class="fg"><label>Tamanho da fonte<select data-k="cfg_fs"><option value="14px">Pequena</option><option value="16px">Normal</option><option value="18px">Grande</option><option value="20px">Muito grande</option></select></label></div><p class="hint" style="margin-top:12px">Os dados ficam salvos no localStorage deste navegador, sem servidor ou internet. Limpar os dados do navegador apaga a ficha: use 📤 Exportar ficha para manter backups em .json.</p></section></main>
+
+<script>
+'use strict';
+const K='ficha_rpg_digital_v1';
+let S={f:{},l:{}},tm;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- Definições ---------- */
+const NIV=['Nível 1','Nível 2','Nível 3','Nível 4','Nível 5','Nível 6','Nível 7','Nível 8','Nível 9','Habilidade especial','Habilidade inata','Passiva'];
+const CAT=['Equipamentos','Armas','Armaduras','Itens','Itens mágicos','Consumíveis','Materiais','Quest / Missão','Itens especiais','Outros'];
+const TAM=['Pequeno','Médio','Grande'];
+const ST=['Pendente','Em andamento','Concluída','Falhou'];
+const TC=['Texto','Número','Área de texto','Sim/Não'];
+const C={
+ habilidades:{b:'Adicionar habilidade',g:'nivel',f:[['nome','Nome','t'],['nivel','Nível','s',NIV],['tipo','Tipo','t'],['custo','Custo','t'],['descricao','Descrição','a'],['efeitos','Efeitos','a'],['obs','Observações','a']]},
+ inv:{b:'Adicionar slot',g:'cat',all:1,cls:'ig',f:[['area','Escreva ou desenhe o item','a'],['nome','Nome do item','t'],['qtd','Qtd.','n'],['cat','Categoria','s',CAT],['tam','Tamanho do slot','s',TAM],['desc','Descrição','a']]},
+ armas:{b:'Adicionar arma',f:[['nome','Nome','t'],['tipo','Tipo','t'],['dano','Dano','t'],['alcance','Alcance','t'],['efeito','Efeito','t'],['peso','Peso','t'],['custo','Custo','t'],['descricao','Descrição','a'],['obs','Observações','a']]},
+ equip:{b:'Adicionar equipamento',f:[['nome','Nome','t'],['tipo','Tipo','t'],['defesa','Defesa','t'],['peso','Peso','t'],['efeitos','Efeitos','a'],['descricao','Descrição','a'],['obs','Observações','a']]},
+ especiais:{b:'Adicionar habilidade especial',f:[['nome','Nome','t'],['tipo','Tipo','t'],['custo','Custo','t'],['recurso','Recurso','t'],['descricao','Descrição','a'],['efeitos','Efeitos','a'],['obs','Observações','a']]},
+ missoes:{b:'Nova missão',f:[['nome','Nome','t'],['status','Status','s',ST],['descricao','Descrição','a'],['objetivo','Objetivo','a'],['recompensa','Recompensa','a']]},
+ npcs:{b:'Adicionar NPC',f:[['nome','Nome','t'],['raca','Raça','t'],['funcao','Função','t'],['relacao','Relação com personagem','t'],['descricao','Descrição','a'],['info','Informações','a'],['obs','Observações','a']]},
+ locais:{b:'Adicionar local',f:[['nome','Nome','t'],['regiao','Região','t'],['descricao','Descrição','a'],['info','Informações','a'],['segredos','Segredos','a'],['obs','Observações','a']]},
+ diario:{b:'Nova entrada',f:[['titulo','Título','t'],['data','Data','d'],['texto','Texto','a']]},
+ notas:{b:'Nova anotação',f:[['titulo','Título','t'],['data','Data (opcional)','d'],['texto','Texto','a']]},
+ custom:{b:'Adicionar campo personalizado',f:[['nome','Nome do campo','t'],['tipo','Tipo do campo','s',TC],['valor','Valor','v']]},
+ moedas:{b:'Adicionar moeda',f:[['nome','Outra moeda','t'],['valor','Quantidade','t']]}
+};
+
+/* ---------- Construção da interface ---------- */
+const fld=(k,lb,a)=>`<label>${lb}${a?`<textarea data-k="${k}" rows="4"></textarea>`:`<input data-k="${k}">`}</label>`;
+const lst=(L)=>`<div id="c-${L}"></div>`;
+const RES=[['vida','♥ Vida'],['san','☽ Sanidade'],['mana','✧ Mana'],['vig','⚡ Vigor'],['con','◎ Pontos de concentração'],['esp','☸ Pontos espirituais'],['esq','➶ Pontos de esquiva']];
+const SEC=[
+ ['personagem','🧑','Personagem',`<div class="fg">${[['nome','Nome'],['idade','Idade'],['raca','Raça'],['classe','Classe'],['altura','Altura'],['nivel','Nível'],['xp','Experiência']].map(a=>fld(...a)).join('')}</div><div class="fg" style="margin-top:10px">${[['aparencia','Aparência'],['personalidade','Personalidade'],['historia','História'],['objetivos','Objetivos']].map(a=>fld(a[0],a[1],1)).join('')}</div>`],
+ ['atributos','⚔','Atributos',`<div class="fg">${['Força','Destreza','Constituição','Carisma','Sabedoria','Inteligência','Fratura','Deslocamento'].map(n=>`<div class="attr"><b>${n}</b><input data-k="a_${n}"></div>`).join('')}</div><div class="fg" style="margin-top:10px">${fld('marca','Marca da morte',1)}</div>`],
+ ['recursos','♥','Recursos',`<div class="fg">${RES.map(([k,n])=>`<div class="res"><b>${n}</b><div class="v"><button data-adj="r_${k}_a" data-d="-1">−</button><input data-k="r_${k}_a" inputmode="numeric"><span>/</span><input data-k="r_${k}_m" inputmode="numeric"><button data-adj="r_${k}_a" data-d="1">+</button></div><div class="bar"><i data-bar="${k}"></i></div></div>`).join('')}<div class="res"><b>🛡 CA</b><div class="v"><input data-k="r_ca"></div></div></div>`],
+ ['habilidades','✦','Habilidades',`<p class="hint">As habilidades ficam agrupadas pelo campo Nível. Mude o nível no seletor para movê-la de grupo.</p>${lst('habilidades')}`,'habilidades'],
+ ['inventario','🎒','Inventário',`<h3>Moedas</h3><div class="coins">${['Ouro','Prata','Cobre'].map(n=>fld('m_'+n,n)).join('')}</div>${lst('moedas')}<div style="margin:10px 0"><button data-add="moedas">➕ Adicionar moeda</button></div><div class="fg" style="margin:10px 0">${fld('capacidade','Capacidade do inventário')}</div>${lst('inv')}`],
+ ['armas','⚔','Armas',lst('armas'),'armas'],
+ ['equipamentos','🛡','Equipamentos',lst('equip'),'equip'],
+ ['especiais','☠','Habilidades especiais',`<p class="hint">Sistemas únicos do personagem (ex.: Sistema Nemesis, habilidades inatas de regras próprias).</p>${lst('especiais')}`,'especiais'],
+ ['missoes','📜','Missões',lst('missoes'),'missoes'],
+ ['npcs','👤','NPCs',lst('npcs'),'npcs'],
+ ['locais','🗺','Locais',lst('locais'),'locais'],
+ ['diario','📖','Diário',lst('diario'),'diario'],
+ ['notas','📝','Anotações',lst('notas'),'notas'],
+ ['custom','🧩','Campos personalizados',`<p class="hint">Crie campos para regras próprias que não existem na ficha.</p>${lst('custom')}`,'custom'],
+ ['config','⚙','Configurações',`<div class="fg"><label>Tamanho da fonte<select data-k="cfg_fs"><option value="14px">Pequena</option><option value="16px">Normal</option><option value="18px">Grande</option><option value="20px">Muito grande</option></select></label></div><p class="hint" style="margin-top:12px">Os dados ficam salvos no localStorage deste navegador, sem servidor ou internet. Limpar os dados do navegador apaga a ficha: use 📤 Exportar ficha para manter backups em .json.</p>`]
+];
+function build(){
+ $('nav').innerHTML=SEC.map(s=>`<a data-nav="${s[0]}">${s[1]} ${s[2]}</a>`).join('');
+ $('main').innerHTML=SEC.map(s=>`<section id="${s[0]}"><h2>${s[1]} ${s[2]}${s[4]?`<button class="b" data-add="${s[4]}">➕ ${C[s[4]].b}</button>`:''}</h2>${s[3]}</section>`).join('');
+}
+
+/* ---------- Blocos dinâmicos ---------- */
+function campo(x,f){
+ const [k,lb,t,o]=f,v=x[k];let i;
+ if(t==='a')i=`<textarea data-f="${k}" rows="3"${k==='area'?' class="ar"':''}>${esc(v)}</textarea>`;
+ else if(t==='s')i=`<select data-f="${k}">${o.map(p=>`<option${p===(v||o[0])?' selected':''}>${p}</option>`).join('')}</select>`;
+ else if(t==='v'){
+  if(x.tipo==='Sim/Não')i=`<input type="checkbox" data-f="${k}"${v===true?' checked':''}>`;
+  else if(x.tipo==='Área de texto')i=`<textarea data-f="${k}" rows="3">${esc(v)}</textarea>`;
+  else i=`<input data-f="${k}" type="${x.tipo==='Número'?'number':'text'}" value="${esc(v)}">`;
+ }else i=`<input data-f="${k}" type="${t==='n'?'number':t==='d'?'date':'text'}" value="${esc(v)}">`;
+ return `<label class="${t==='a'?'w':''}">${lb}${i}</label>`;
+}
+function card(L,x,i){
+ let z='';
+ if(L==='inv')z='z'+Math.max(0,TAM.indexOf(x.tam));
+ if(L==='missoes')z='s'+Math.max(0,ST.indexOf(x.status));
+ return `<div class="card ${z}" data-l="${L}" data-i="${i}"><button class="x" data-rm>🗑 Remover</button><div class="fg">${C[L].f.map(f=>campo(x,f)).join('')}</div></div>`;
+}
+function renderLista(L){
+ const c=C[L],ls=S.l[L]||[],el=$('c-'+L);let h='';
+ if(c.g){
+  const opts=c.f.find(f=>f[0]===c.g)[3];
+  opts.forEach(o=>{
+   const it=ls.map((x,i)=>[x,i]).filter(p=>(p[0][c.g]||opts[0])===o);
+   if(it.length||c.all)h+=`<h3>${o} <small>(${it.length})</small>${c.all?`<button class="b" data-add="${L}" data-g="${o}">➕ Adicionar slot</button>`:''}</h3><div class="${c.cls||'lst'}">${it.map(p=>card(L,p[0],p[1])).join('')}</div>`;
+  });
+ }else h=`<div class="${c.cls||'lst'}">${ls.map((x,i)=>card(L,x,i)).join('')}</div>`;
+ if(!ls.length&&!c.all)h+='<p class="em">Nada aqui ainda. Use o botão ➕ para adicionar.</p>';
+ el.innerHTML=h;
+}
+function adicionar(L,g){
+ const c=C[L],o={};
+ c.f.forEach(f=>{if(f[2]==='s')o[f[0]]=f[3][0]});
+ if(g)o[c.g]=g;
+ (S.l[L]=S.l[L]||[]).push(o);
+ renderLista(L);salvarDados();
+}
+const adicionarHabilidade=()=>adicionar('habilidades'),adicionarItem=g=>adicionar('inv',g),adicionarArma=()=>adicionar('armas'),adicionarEquipamento=()=>adicionar('equip'),adicionarMissao=()=>adicionar('missoes'),adicionarNPC=()=>adicionar('npcs'),adicionarLocal=()=>adicionar('locais'),adicionarAnotacao=()=>adicionar('notas');
+function remover(L,i){
+ if(!confirm('Tem certeza que deseja remover este item?'))return;
+ S.l[L].splice(i,1);renderLista(L);salvarDados();
+}
+
+/* ---------- Campos fixos ---------- */
+function preencher(){
+ document.querySelectorAll('[data-k]').forEach(e=>{e.value=S.f[e.dataset.k]||(e.tagName==='SELECT'?'16px':'')});
+ barras();
+ document.documentElement.style.fontSize=S.f.cfg_fs||'16px';
+}
+function barras(){
+ RES.forEach(([k])=>{
+  const a=parseFloat(S.f['r_'+k+'_a']),m=parseFloat(S.f['r_'+k+'_m']);
+  const p=m>0&&a>=0?Math.min(100,a/m*100):0;
+  document.querySelector(`[data-bar="${k}"]`).style.width=p+'%';
+ });
+}
+function renderTudo(){preencher();Object.keys(C).forEach(renderLista)}
+
+/* ---------- Salvamento ---------- */
+function status(t,c){const s=$('st');s.textContent=t;s.className=c||''}
+function marcarAlterado(){status('● Alterações não salvas','d');clearTimeout(tm);tm=setTimeout(salvarDados,500)}
+function salvarDados(){
+ clearTimeout(tm);status('● Salvando...','d');
+ try{localStorage.setItem(K,JSON.stringify(S));setTimeout(()=>status('✓ Salvo'),200)}
+ catch(e){status('● Erro ao salvar (exporte um backup)','e')}
+}
+function carregarDados(){
+ try{const d=JSON.parse(localStorage.getItem(K));if(d&&d.f&&d.l)S=d;else S={f:{},l:{}}}
+ catch(e){S={f:{},l:{}}}
+}
+function recarregar(){carregarDados();renderTudo();status('✓ Salvo')}
+function limparFicha(){
+ if(!confirm('Tem certeza que deseja apagar todos os dados? Essa ação não poderá ser desfeita.'))return;
+ S={f:{},l:{}};renderTudo();salvarDados();
+}
+function exportarDados(){
+ const a=document.createElement('a');
+ a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));
+ a.download='personagem.json';document.body.appendChild(a);a.click();a.remove();
+}
+function importarDados(file){
+ if(!file)return;
+ const r=new FileReader();
+ r.onload=()=>{
+  try{
+   const d=JSON.parse(r.result);
+   if(!d||typeof d.f!=='object'||typeof d.l!=='object')throw 0;
+   if(!confirm('Importar este arquivo substituirá a ficha atual. Continuar?'))return;
+   S={f:d.f,l:d.l};renderTudo();salvarDados();
+  }catch(e){alert('Arquivo inválido. Selecione um .json exportado por esta ficha.')}
+  $('fImp').value='';
+ };
+ r.readAsText(file);
+}
+
+/* ---------- Eventos ---------- */
+function gravar(t,v){
+ const c=t.closest('[data-i]'),x=S.l[c.dataset.l][c.dataset.i];
+ x[t.dataset.f]=v;
+ if(c.dataset.l==='custom'&&t.dataset.f==='tipo')x.valor='';
+ return c.dataset.l;
+}
+document.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.dataset.k){S.f[t.dataset.k]=t.value;if(t.dataset.k==='cfg_fs')document.documentElement.style.fontSize=t.value;barras();marcarAlterado()}
+ else if(t.dataset.f&&t.tagName!=='SELECT'&&t.type!=='checkbox'){gravar(t,t.value);marcarAlterado()}
+});
+document.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.dataset.f&&t.type==='checkbox'){gravar(t,t.checked);marcarAlterado()}
+ else if(t.dataset.f&&t.tagName==='SELECT'){const L=gravar(t,t.value);renderLista(L);marcarAlterado()}
+});
+document.addEventListener('click',e=>{
+ const t=e.target.closest('button,a,[data-nav]');if(!t)return;
+ if(t.dataset.add)adicionar(t.dataset.add,t.dataset.g);
+ else if(t.hasAttribute('data-rm')){const c=t.closest('[data-i]');remover(c.dataset.l,+c.dataset.i)}
+ else if(t.dataset.adj){
+  const k=t.dataset.adj,n=(parseInt(S.f[k])||0)+(+t.dataset.d);
+  S.f[k]=String(n);document.querySelector(`[data-k="${k}"]`).value=n;barras();marcarAlterado();
+ }else if(t.dataset.nav){
+  $(t.dataset.nav).scrollIntoView({behavior:'smooth'});document.body.classList.remove('open');
+ }
+});
+$('bSave').onclick=salvarDados;$('bLoad').onclick=recarregar;$('bClear').onclick=limparFicha;$('bExp').onclick=exportarDados;
+$('fImp').onchange=e=>importarDados(e.target.files[0]);
+window.addEventListener('beforeunload',()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}});
+
+/* ---------- Início ---------- */
+build();carregarDados();renderTudo();
+</script>
+
+
+</body></html>
