@@ -1,0 +1,299 @@
+{
+  "f": {
+    "nome": "Nilus stonewall",
+    "idade": "25",
+    "raca": "Humano (Reencarnado)",
+    "classe": "Bruiser espada - duplas mente afiada",
+    "altura": "1.98",
+    "nivel": "6",
+    "xp": "0",
+    "a_Destreza": "10",
+    "a_Constituição": "10",
+    "a_Carisma": "0",
+    "a_Sabedoria": "8",
+    "a_Inteligência": "4",
+    "a_Fratura": "0",
+    "a_Deslocamento": "6m",
+    "marca": "",
+    "r_vida_a": "214",
+    "r_vida_m": "214",
+    "r_san_a": "100",
+    "r_san_m": "100",
+    "r_mana_a": "340",
+    "r_mana_m": "340",
+    "r_vig_a": "260",
+    "r_vig_m": "260",
+    "r_con_a": "45",
+    "r_con_m": "45",
+    "r_esp_a": "32",
+    "r_esp_m": "32",
+    "r_esq_a": "3",
+    "r_esq_m": "3",
+    "r_dem_a": "10",
+    "r_dem_m": "10",
+    "a_Força": "0",
+    "m_Ouro": "6",
+    "r_ca": "26",
+    "m_Prata": "0"
+  },
+  "l": {
+    "habilidades": [
+      {
+        "nivel": "Nível 1",
+        "nome": "Estocada rapida",
+        "tipo": "Ativa",
+        "custo": "20 de vigor",
+        "descricao": "O bruiser desfere uma estocada rapida e precisa",
+        "efeitos": "A estocada rápida desnorteia o alvo. Caso o resultado do ataque seja maior que 14 no d20, a Classe de Armadura (CA) do inimigo diminui em 1.\n",
+        "obs": "1 turno"
+      },
+      {
+        "nivel": "Nível 2",
+        "nome": "Turbilhão de cortes",
+        "tipo": "Ativa",
+        "custo": "30 de vigor",
+        "descricao": "O Bruiser desfere uma sequência de cortes rápidos contra inimigos próximos.",
+        "efeitos": "Dano:\n• Contra 1 alvo → 1d12  \n• Contra 2 alvos → 1d6 em cada alvo\n",
+        "obs": "Cooldown: 2 turnos seus  "
+      },
+      {
+        "nivel": "Nível 3",
+        "nome": "Multi Ataque",
+        "tipo": "Ativa",
+        "custo": "20 de vigor por ataque",
+        "descricao": "O Bruiser se concentra e desfere uma sequência de golpes rápidos contra o mesmo alvo.",
+        "efeitos": "Cada golpe extra causa metade do dano do primeiro ataque (arredondado para cima).",
+        "obs": "Cooldown 5 turnos\nPrimeiro golpe extra → CD 12  \nSegundo golpe extra → CD 15  \nTerceiro golpe extra → CD 20\n• 20 natural → o dano do golpe será igual ao dano total do primeiro golpe."
+      },
+      {
+        "nivel": "Nível 4",
+        "nome": "Estocada Dupla",
+        "efeitos": "Soma do dano das duas armas empunhadas.\n",
+        "descricao": "O Bruiser avança contra um alvo e desfere duas estocadas precisas com suas lâminas.",
+        "obs": "Após avançar na direção de um único alvo, o Bruiser perfura dois pontos vitais com suas lâminas.",
+        "custo": "4o de vigor",
+        "tipo": "Ativa"
+      },
+      {
+        "nivel": "Habilidade especial",
+        "nome": "Avanço mortifero",
+        "tipo": "Ativa",
+        "descricao": "O Bruiser posiciona suas espadas contra os próprios ombros e avança até 10 metros, cortando todos os inimigos em seu caminho.",
+        "obs": "Cooldown: 24h",
+        "efeitos": "Para cada alvo atingido, role 1d20.\n• Resultado maior que 12 → o alvo é cortado e sofre 25% do dano.  \n• Caso apenas um alvo seja atingido, o ataque precisa superar a CA do inimigo.\nDano:\n• Contra múltiplos alvos → dano da arma + 50%  \n• Contra um único alvo → dano cheio + 25%\n"
+      },
+      {
+        "nivel": "Nível 5",
+        "nome": "Valsa das laminas",
+        "tipo": "Passiva",
+        "custo": "40 de vigor",
+        "descricao": "Após acertar o primeiro ataque de sua ação, o Bruiser pode tentar um segundo golpe no mesmo alvo.",
+        "efeitos": "O segundo ataque causa metade do dano do primeiro golpe.",
+        "obs": "Não pode ser usado junto com outras habilidades, como Multi Ataque."
+      },
+      {
+        "nivel": "Nível 6",
+        "nome": "Mestre das espadas",
+        "tipo": "Passiva",
+        "custo": "0",
+        "descricao": "O Bruiser usa sua experiência para antecipar os \nmovimentos do inimigo. \n",
+        "efeitos": "3d6 de dano físico quando contra atacar alguém com \nmais de 25 de CA. \n",
+        "obs": "O Bruiser ganha +3 em testes de contra ataque contra \ninimigos com CA superior a 20 e pode usar uma reação para \ndesferir um golpe extra quando tiver um contra ataque bem \nsucedido, causando metade do dano normal. \n"
+      },
+      {
+        "nivel": "Nível 7",
+        "nome": "Ataque lacerante",
+        "tipo": "Ativa",
+        "custo": "80 de vigor",
+        "descricao": "O Bruiser aplica um golpe com tanta força que ele deixa \num rastro de dor no corpo do inimigo, enfraquecendo-o. \n",
+        "efeitos": " +5d6 de dano físico + 3d6 de dano cortante.\nO inimigo fica com -3 de de CA a dano até o fim do \npróximo turno. Caso o Bruiser acerte 2 ou mais inimigos com \nessa habilidade, a duração do efeito é dobrada. ",
+        "obs": "Cooldown: 6 turnos seus. "
+      },
+      {
+        "nivel": "Nível 8",
+        "nome": "Análise Crítica ",
+        "tipo": "Ativa",
+        "custo": "40 de vigor e 7 concentração",
+        "descricao": "O usuário foca em um inimigo, estudando seus \nmovimentos e pontos fracos com precisão. \n",
+        "efeitos": "Efeito: O próximo ataque do usuário contra esse inimigo tem \nvantagem, e o dano é aumentado em 3d6\n",
+        "obs": "Cooldown: 3 turnos seus. "
+      },
+      {
+        "nivel": "Passiva",
+        "nome": "Caçador oculto",
+        "tipo": "Passiva",
+        "descricao": "ultiliza os instinstos magicos e biologicos para para ",
+        "efeitos": "Identificar mentiras com vantagem\nE identifico se a intenção da pessoa é boa ou má "
+      },
+      {
+        "nivel": "Passiva",
+        "nome": "invisibilidade embaixo da agua",
+        "tipo": "Passiva",
+        "descricao": "Invisivel em baixo da água",
+        "efeitos": "Invisivel em baixo da água"
+      },
+      {
+        "nivel": "Passiva",
+        "nome": "Anfibio",
+        "tipo": "Passiva",
+        "descricao": "Copiada das tubarões mutantes de sentina",
+        "efeitos": "Respirar embaixo da água e se mover livremente "
+      }
+    ],
+    "especiais": [
+      {
+        "nome": "Avaliação",
+        "tipo": "Passiva",
+        "descricao": "Permite analisar objetos, criaturas ou pessoas.\nQuanto maior a proficiência na habilidade, mais informações são obtidas.  \nQuando usada em seres vivos, pode revelar dados semelhantes a uma ficha de personagem.\n",
+        "custo": "0",
+        "recurso": "0",
+        "efeitos": "Role um d100"
+      },
+      {
+        "nome": " Memória do Mundo",
+        "tipo": "Passiva",
+        "custo": "0",
+        "recurso": "0",
+        "descricao": "sempre que criar uma nova habilidade aumenta o custo das pais em 10%\nAo completar missões específicas, você pode copiar e armazenar habilidades inatas de outras pessoas na **Memória do Mundo**.\nEssas habilidades podem ser fundidas para criar versões mais poderosas.\nCaso a dificuldade para copiar uma habilidade seja muito alta, a condição necessária pode ser parcialmente alterada.\n"
+      },
+      {
+        "nome": "Túmulo de espadas",
+        "tipo": "Passiva",
+        "custo": "0",
+        "recurso": "0",
+        "descricao": "Aumenta o entendimento de espadas fazendo com que o corpo siga o caminho da espada mais eficiente e aumenta os sentidos corporais ",
+        "efeitos": "Benefícios: depende da ocasião muda o benefício para se adequar ao melhor/ 1 vantagem"
+      },
+      {
+        "nome": "Conjurar explosão",
+        "tipo": "Ativa",
+        "custo": "10",
+        "recurso": "mana",
+        "descricao": "o usuário explode uma area de 2m a escolha",
+        "efeitos": "1d6"
+      },
+      {
+        "nome": "Manipulação de fogo",
+        "tipo": "Ativa",
+        "custo": "15",
+        "recurso": "mana",
+        "descricao": "O usuário é capaz de manipular fogo",
+        "efeitos": "1d6",
+        "obs": "Cooldown 1 turno"
+      },
+      {
+        "nome": "Turbilhão de Cortes explosivos",
+        "tipo": "Ativa",
+        "custo": "30 vigor",
+        "recurso": "10 de mana",
+        "descricao": "O Bruiser desfere uma sequência de cortes rápidos contra inimigos próximos que explodem apos todos os golpes.",
+        "efeitos": "Dano: \n• Contra 1 alvo → 2d12  físico +2d6 explosivos\n• Contra 2 alvos → 2d6 em cada alvo + 2d6 explosivos\n"
+      },
+      {
+        "nome": "Banquete do rei",
+        "tipo": "Ativa",
+        "custo": "2o%",
+        "recurso": "vida atual",
+        "obs": "Tempo de Recarga (CD): 1 dia (Por enquanto)\n\nA Fome Pós-Banquete: Após o roubo de combate (ou após as 3 rodadas se o combate demorar muito), o usuário entra em um estado de fome. Recebendo uma penalidade de -5 em todos os atributos até que consuma uma refeição completa ou realize um descanso curto.NP",
+        "descricao": "Ao envolver o alvo em uma aura de sombras viscosas e famintas, o usuário \"consome\" uma parte da essência do inimigo, recebendo os seguintes benefícios aleatórios (Role 1d6):",
+        "efeitos": "1-2 +2 força ou destreza\n3-4 +2 inteligencia ou poder demoniaco\n5-6: copia a ultima skill usada pelo alvo"
+      }
+    ],
+    "inv": [
+      {
+        "cat": "Itens mágicos",
+        "tam": "Grande",
+        "nome": "Bússola escarlate ",
+        "qtd": "1",
+        "desc": "Rastreamento de essenciais: aponta a criatura ou local relacionado ao rastro no momento quando pingar sangue no momento em que pingar\nSincronia de combate: pode usar reação para abrir o relógio e rastrear e prever o ataque Concede +2 em teste de combate\nFrequência Temporal: Pode sobrecarregar o relógio e aumenta o deslocamento em 5m mas perde as propriedades mágicas até o amanhecer\nHorário da morte a bússola mostra o quão perto estou da morte gastando uma ação e um turno\n",
+        "area": "Rastreamento de essenciais: aponta a criatura ou local relacionado ao rastro no momento quando pingar sangue no momento em que pingar\nSincronia de combate: pode usar reação para abrir o relógio e rastrear e prever o ataque Concede +2 em teste de combate\nFrequência Temporal: Pode sobrecarregar o relógio e aumenta o deslocamento em 5m mas perde as propriedades mágicas até o amanhecer\nHorário da morte a bússola mostra o quão perto estou da morte gastando uma ação e um turno\n"
+      },
+      {
+        "cat": "Armas",
+        "tam": "Médio",
+        "nome": "Cimitarar",
+        "qtd": "2",
+        "desc": "Dano 2d12+for"
+      },
+      {
+        "cat": "Materiais",
+        "tam": "Pequeno",
+        "nome": "Cristais de mana",
+        "qtd": "22",
+        "desc": "cristais de mana encontrada na caverna do darkin",
+        "area": "Possuem em torno de 100 de mana"
+      },
+      {
+        "cat": "Consumíveis",
+        "tam": "Pequeno",
+        "nome": "Garrafas de vinho",
+        "qtd": "10",
+        "desc": "Vinho do naufrago de centina"
+      },
+      {
+        "cat": "Equipamentos",
+        "tam": "Pequeno",
+        "nome": "Coroa de ferro ",
+        "qtd": "1",
+        "desc": "Coroa de ferro da caverna darkin"
+      },
+      {
+        "cat": "Equipamentos",
+        "tam": "Médio",
+        "nome": "Espelo negro",
+        "qtd": "1",
+        "desc": "Efeito: uma vez por dia, revela a última criatura que esteve em determinado local, incluindo rastros de magia e presenças invisíveis.\n",
+        "area": "Um espelho negro que nunca reflete exatamente quem está diante dele.\n\nPreço oculto: às vezes, mostra alguém que ainda não chegou. E essa pessoa sempre está olhando diretamente para o observador.\n"
+      },
+      {
+        "cat": "Itens mágicos",
+        "tam": "Médio",
+        "nome": "Anel do Rei Esquecido",
+        "desc": "Efeito: uma vez por combate, quando o portador receber um golpe fatal, permanece com 1 ponto de vida.\nExtra: por alguns segundos, sua presença intimida criaturas próximas e cura metade do dano causado.\nMaldição: após ativar, o portador ouve uma voz chamando-o de usurpador.",
+        "area": "Um anel negro com uma pedra vermelha que parece observar quem o utiliza.\n"
+      }
+    ],
+    "armas": [
+      {
+        "nome": "A espada sem nome",
+        "tipo": "cortante",
+        "dano": "3d12*3+2d6",
+        "custo": "0",
+        "descricao": "Uma espada que cria um segundo corte espectral, repetindo o movimento original com um pequeno atraso.\n\nCausa metade do dano\n",
+        "efeito": "Ecos",
+        "obs": "Poder: o segundo golpe pode atingir inimigos que apararam ou bloquearam o primeiro, embora cause dano reduzido(CD valor da CA inimiga).\n"
+      },
+      {
+        "nome": "Adaga de familia",
+        "tipo": "cortante",
+        "dano": "1d4",
+        "custo": "0"
+      },
+      {
+        "nome": "Lamina do predador de teias",
+        "tipo": "cortante ou laçerante",
+        "dano": "2d8 ou 2d10+2d6",
+        "alcance": "1.5m ou 3m",
+        "descricao": "A Lâmina do Predador de Teias tem duas formas funcionais distintas: Lâmina Fechada e Fauces da Teia ",
+        "obs": "Forma 1: Lâmina Fechada (Ativação Passiva)\nForma 2: Fauces da Teia (Ativação Ativa - Custo de Pontos de Sangue)\n\ntaque de Mordida: Como parte de uma ação de ataque, você pode usar uma ação bônus para fazer um ataque de Mordida com as Fauces. Use o mesmo bônus de ataque da espada. Se acertar, causa 2d4 de dano perfurante e o alvo deve passar num teste de resistência de Destreza (DC 15) ou ser contido por 1 rodada pelas teias pegajosas que se prendem aos dentes e ao tentáculo.\nSede de Sangue Frenética: Para cada Acerto Crítico que você realizar desta forma, você ganha 1 Ponto de Sangue extra.\n"
+      }
+    ],
+    "equip": [
+      {
+        "nome": "Armadura de couro",
+        "tipo": "Leve",
+        "defesa": "+4",
+        "peso": "0",
+        "efeitos": "armadura de couro"
+      },
+      {
+        "nome": "Escudo",
+        "tipo": "leve",
+        "defesa": "+1",
+        "peso": "0",
+        "efeitos": "+50 de hp"
+      }
+    ],
+    "moedas": []
+  }
+}
