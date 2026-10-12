@@ -1,0 +1,284 @@
+{
+  "f": {
+    "cfg_fs": "16px",
+    "nome": "Lyssandra",
+    "idade": "16",
+    "raca": "Vastaya Lhotlan",
+    "classe": "Atirador mágico Lhotlan",
+    "altura": "1,50m",
+    "a_Força": "",
+    "a_Destreza": "12",
+    "a_Constituição": "1",
+    "a_Carisma": "4",
+    "a_Sabedoria": "12",
+    "a_Inteligência": "2",
+    "a_Fratura": "2",
+    "a_Deslocamento": "6 metros",
+    "marca": "Visão das fissuras\nCorpo profanado - pele fria, “corpo morto”\nMarca no ombro\nBônus de proficiência: metade do atributo utilizado\nPontos de esquiva: 3\nAção de reação: Sabedoria (12/12)\nPontos de fratura: 2\n\nPotencial arcano 1 (mudar a ficha amanha)\nHp x2\nDano x5 de habilidade que nao multiplicam\n+1 dado em tudo\n\n\n66 frutas variadas",
+    "r_vida_a": "98",
+    "r_vida_m": "144",
+    "r_san_a": "84",
+    "r_san_m": "84",
+    "r_mana_a": "230",
+    "r_mana_m": "300",
+    "r_vig_a": "160",
+    "r_vig_m": "160",
+    "r_con_a": "36",
+    "r_con_m": "40",
+    "r_esp_a": "64",
+    "r_esp_m": "64",
+    "r_esq_a": "3",
+    "r_esq_m": "3",
+    "r_ca": "14",
+    "m_Ouro": "3",
+    "m_Prata": "6",
+    "m_Cobre": "0",
+    "capacidade": "Inventário: 5x a Força ou Constituição. Atributo de Força não informado.",
+    "nivel": "5",
+    "xp": "0",
+    "historia": "Desde pequena, Lyssandra cresceu ouvindo histórias de seus pais, os lendários Vastayas, conhecidos por suas habilidades incríveis e pela paixão que compartilhavam. Xayah, a mãe protetora, sempre que podia, ensinava a filha a arte das plumadagas – as armas icônicas que ela mesma dominava com maestria. Sob a tutela de Xayah, Lyssandra aprendeu a controlar as plumadagas, sentindo a magia das penas fluírem por suas mãos.\n\nMas a vida de Lyssandra foi marcada por um mistério doloroso. Rakan e Xayah, em um dia fatídico, partiram sem explicação. Lyssandra partiu para uma pequena vila em Ionia, onde ficou com alguns senhores que a ajudaram. Lyssandra, com apenas sete anos na época, ficou esperando pela volta de seus pais, mas eles nunca retornaram. A ausência deles queimava como uma ferida aberta.\n\nOs anos passaram e Lyssandra cresceu em meio ao conflito interno entre a esperança de reencontrar seus pais e a dor de sua ausência. Ela se dedicou aos treinos, tentando honrar o legado de Rakan e Xayah. Sua habilidade com as plumadagas floresceu, e ela começou a descobrir sua própria voz dentro da magia que seus pais lhe haviam deixado.\n\nA tragédia, no entanto, atingiu novamente quando a vila em que Lyssandra vivia foi destruída durante uma invasão de Noxus. A brutalidade do ataque deixou cicatrizes profundas na jovem, tanto física quanto emocionalmente. Mas também acendeu uma chama de determinação dentro dela.\n\nDeterminada e corajosa, Lyssandra embarca em uma jornada não apenas para descobrir a verdade sobre o desaparecimento de seus pais, mas também para encontrar seu próprio lugar em Runeterra. Com suas plumadagas afiadas e um coração cheio de saudade e esperança, Lyssandra se lança ao desconhecido, na esperança de reencontrar seus pais e de construir um legado ainda maior.",
+    "aparencia": "Pele fria, semelhante à de um corpo morto; possui uma marca no ombro. Outros detalhes de aparência não informados.",
+    "recuperacao": "Mana: recupera 10 a cada 5 turnos.\nVigor: recupera 15 a cada ação que não usar habilidade.",
+    "pontos_concentracao_a": "40",
+    "pontos_concentracao_m": "40",
+    "pontos_espirituais_formula": "3×Sabedoria + 40",
+    "reacao_a": "8",
+    "reacao_m": "8"
+  },
+  "l": {
+    "habilidades": [
+      {
+        "nivel": "Nível 2",
+        "nome": "Escalonamento do dano das plumas",
+        "tipo": "Progressão",
+        "custo": "0",
+        "descricao": "O dano das plumas escala conforme o nível da personagem.",
+        "efeitos": "Nível 2: 2d6\nNível 3: 2d8\nNível 4: 2d10\nNível 5: 3d12"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Retorno",
+        "tipo": "Ativa",
+        "custo": "10 de mana por pluma",
+        "descricao": "As plumadagas retornam até você causando metade do dano antes causado, arredondado para cima.",
+        "efeitos": "Exemplo: 8 de dano, na volta o dano será 4.",
+        "obs": "Cooldown: nenhum."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Vínculo da pluma",
+        "tipo": "Ativa",
+        "custo": "25 de mana por acerto dobrado",
+        "descricao": "Marca um inimigo com uma pluma. O alvo marcado é incapaz de fazer um ataque surpresa e toma o dobro de dano dos ataques causados pelo conjurador.",
+        "efeitos": "O alvo marcado não pode realizar ataque surpresa e recebe o dobro do dano dos ataques do conjurador."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Disparo Preciso",
+        "tipo": "Ativa",
+        "custo": "2 pontos de concentração",
+        "descricao": "O atirador realiza um disparo altamente preciso em um alvo específico, causando alto dano físico. Este ataque é especialmente eficaz contra alvos únicos.",
+        "efeitos": "+1d8 contra alvos isolados ou +1d6 ao alvejar vários alvos.",
+        "obs": "Cooldown: 2 turnos próprios."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Tiro Rápido",
+        "tipo": "Ativa",
+        "custo": "2 pontos de concentração por alvo",
+        "descricao": "O atirador dispara uma série de tiros rápidos em um curto período, causando dano moderado e permitindo atingir múltiplos alvos próximos.",
+        "efeitos": "Dispare 1 bala extra contra um alvo único ou ataque 2 alvos em 1 ação.",
+        "obs": "Cooldown: 3 turnos próprios."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Dança Plumária Ascendente",
+        "tipo": "Área / Mobilidade / Controle",
+        "custo": "50 de mana",
+        "descricao": "A personagem impulsiona-se rapidamente para o alto, como se fosse puxada por uma corrente de vento. No ápice do salto, gira graciosamente no ar, espalhando energia mágica pelas asas e disparando uma rajada de penas afiadas em todas as direções, cobrindo um raio de até 4 metros ao redor do ponto de queda. Ao aterrissar, as penas permanecem cravadas no chão por alguns instantes, brilhando com energia residual.",
+        "alcance": "4 metros em área ao redor",
+        "efeitos": "Terreno difícil: as penas no chão causam terreno difícil. Criaturas que passarem pela área têm metade do deslocamento OU recebem o dano das penas por metro percorrido dentro do terreno.\nDano em área: todos os inimigos no raio recebem 3d12×2+1d4.\nÉ possível puxar as plumadagas de volta, causando metade do dano novamente.",
+        "obs": "Recarga: 3 turnos próprios."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Véu das Plumas Silenciosas",
+        "tipo": "Camuflagem / Mobilidade",
+        "custo": "10 de vigor por turno escondida",
+        "descricao": "A personagem altera a cor de suas penas e cabelos, fazendo seu corpo se misturar com o ambiente como uma miragem viva. Seus movimentos ficam leves e quase imperceptíveis, como uma dança silenciosa nas sombras. Enquanto estiver sob esse efeito, torna-se extremamente difícil de detectar.",
+        "efeitos": "Camuflagem ativa: fortemente camuflada; passos fazem pouquíssimo som; ataques pelas costas têm +5 de acerto.\nAo atacar um inimigo desprevenido, causa dano crítico massivo (dano cheio).\nMovimento predatório: velocidade aumentada e capacidade de se reposicionar rapidamente entre sombras e obstáculos.\nAo usar Movimento Predatório, gasta 2 pontos de concentração e 30 de vigor, tem vantagem no acerto e causa dano cheio + dobro.\nSe atacar e não eliminar o alvo, a camuflagem é desativada instantaneamente."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Salto Vastaya",
+        "tipo": "Passiva / Mobilidade",
+        "custo": "0",
+        "descricao": "Quando você fizer um salto à distância, o alcance se tornará 2 vezes seu valor de Força e você não precisa realizar uma movimentação prévia. Além disso, ao realizar saltos em altura, pode saltar até um número de vezes igual ao dobro do modificador de Força, com mínimo de 1 metro de altura.",
+        "efeitos": "Salto à distância: 2× o valor de Força. Salto em altura: até o dobro do modificador de Força em metros, mínimo de 1."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Plumadagas",
+        "tipo": "Criação de arma / Passiva",
+        "custo": "Ação bônus",
+        "descricao": "Você pode usar uma ação bônus para criar 2 penas afiadas (2d4) e usá-las como adagas, causando sua Destreza como dano adicional aos ataques feitos com elas.",
+        "efeitos": "Pode criar plumadagas um número de vezes igual ao bônus de proficiência por descanso curto. Pode manter um número de plumadagas igual ao dobro do bônus de proficiência.",
+        "obs": "A ficha também registra 4 plumadagas guardadas. Cada plumadaga quebra após ser utilizada 3 vezes."
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Mirar",
+        "tipo": "Ação",
+        "custo": "2 pontos de concentração",
+        "descricao": "Um atirador pode gastar 1 ação para mirar.",
+        "efeitos": "Gasta 1 ação e 2 pontos de concentração."
+      },
+      {
+        "nivel": "Nível 5",
+        "nome": "Estouro de Chamas",
+        "tipo": "Ultimate simples (classe)",
+        "custo": "3 pontos de concentração",
+        "descricao": "O atirador dispara uma explosão de chamas em um cone à sua frente, causando dano de fogo a todas as criaturas atingidas e aplicando queimadura ao longo do tempo.",
+        "efeitos": "6d8 de dano em área. Os inimigos queimam e recebem 2d6 de dano por 4 turnos.",
+        "obs": "Cooldown: 24 horas. Após usar, o usuário recebe -2 em acertos por 1d6 turnos, mínimo de 2 turnos próprios."
+      },
+      {
+        "nivel": "Nível 5",
+        "nome": "Palco das Cem Plumas",
+        "tipo": "Ultimate criada — Controle de área / Ilusão / Burst",
+        "custo": "120 de vigor, 50 de mana, 20 pontos espirituais e 3 pontos de concentração",
+        "descricao": "A personagem abre os braços e invoca um círculo mágico de penas ao redor dela, criando uma espécie de palco encantado. As penas flutuam lentamente no ar, girando como se seguissem uma coreografia invisível. Dentro dessa área, tudo parece mais lento e perigoso.",
+        "alcance": "Até 5 metros (zona criada)",
+        "duracao": "Alguns segundos",
+        "efeitos": "Zona de controle: inimigos dentro do círculo têm velocidade reduzida e dificuldade para sair da área.\nIlusão e confusão: as penas criam imagens falsas da personagem; inimigos têm chance de errar ataques ou atacar uma ilusão.\nExplosão final: ao final da duração ou ao reativar, todas as penas convergem para o centro, causando 6d12×2+4d6+Destreza de dano em área.\nInteração com Dança Plumária Ascendente: se usada dentro da área, o número de penas dobra.\nInteração com Vínculo da pluma: o alvo vinculado fica preso dentro da área por mais tempo ou recebe dano extra na explosão final.",
+        "obs": "Recarga: 4 turnos meus"
+      },
+      {
+        "nivel": "Nível 6",
+        "nome": "Impacto energético",
+        "tipo": "Ação",
+        "descricao": "O atirador canaliza energia arcana em sua arma Astra,\ndisparando um projétil de energia pura que causa dano mágico e físico.\nDano: 4d6*5 de dano mágico e 2d12 de dano físico.\n",
+        "obs": "Cooldown: 3 turnos meus",
+        "custo": "60 de maana e 4 pontos de concentração"
+      },
+      {
+        "nivel": "Nível 7",
+        "descricao": "O atirador ativa a habilidade rúnica de sua arma Astra, aumentando a precisão de seus disparos e concedendo bônus de dano.",
+        "nome": "Mira runica",
+        "obs": "Colldown: 1 turno meu",
+        "efeitos": "+2d12*2 de dano e o atirador tem vantagem em testes de ataque para acertar o alvo.",
+        "custo": "20 de maana e 3 pontos de concentração"
+      },
+      {
+        "nivel": "Nível 1",
+        "nome": "Mimificação",
+        "tipo": "Magia yordle",
+        "custo": "25 de maana",
+        "descricao": "Consegue mudar o corpo, como ficar maior ou mais caracteristicas animais ou parecer humana"
+      }
+    ],
+    "inv": [
+      {
+        "cat": "Armas",
+        "tam": "Médio",
+        "nome": "Plumadagas guardadas",
+        "qtd": "4",
+        "desc": "Quatro plumadagas guardadas. Cada uma se desgasta e quebra após ser utilizada 3 vezes.",
+        "area": "É possível lançar até 4 plumadagas de cada mão, mas isso custa 4 pontos de concentração."
+      },
+      {
+        "cat": "Armas",
+        "tam": "Médio",
+        "nome": "Besta mágica",
+        "qtd": "1",
+        "desc": "Arma mágica utilizada para disparos.",
+        "area": "Dano: 1d6 + 1d8×5 + 1d6 + plumadaga (3d12) + Destreza e proficiência. Custo: 20 de mana para utilizar."
+      },
+      {
+        "cat": "Itens",
+        "tam": "Pequeno",
+        "nome": "Conta da Haru",
+        "qtd": "1"
+      },
+      {
+        "cat": "Itens",
+        "tam": "Pequeno",
+        "nome": "Espelho de Haru",
+        "qtd": "1"
+      },
+      {
+        "cat": "Equipamentos",
+        "tam": "Pequeno",
+        "area": "Cura 1d12×2",
+        "nome": "Pot de refil"
+      }
+    ],
+    "armas": [
+      {
+        "nome": "Besta mágica",
+        "tipo": "Mágica / Disparo",
+        "dano": "1d6 + 1d8×5 + 1d6 + plumadaga (2d10 ida ou 2d5 volta) + Destreza e proficiência",
+        "alcance": "",
+        "custo": "20 de mana",
+        "peso": "",
+        "descricao": "Besta mágica de Lyssandra.",
+        "efeito": "Dano conforme descrito na ficha."
+      },
+      {
+        "nome": "Plumadagas",
+        "tipo": "Arremesso / Cortante",
+        "dano": "2d10 na ida ou 2d5 na volta (conforme anotação da besta); criação: 2d4 + Destreza",
+        "alcance": "",
+        "custo": "2 pontos de concentração para lançar até duas plumadagas de cada mão",
+        "peso": "",
+        "descricao": "Penas afiadas usadas como adagas. Há 4 plumadagas guardadas; cada uma quebra após 3 utilizações.",
+        "efeito": "Retorno: causa metade do dano anterior, arredondado para cima; custo de 10 de mana por pluma."
+      }
+    ],
+    "especiais": [],
+    "notas": [
+      {
+        "titulo": "Intenções e metas",
+        "texto": "Encontrar seus pais ou entender o que aconteceu.\nConstruir um legado enorme.\nAjudar a encontrar as joias rúnicas.\nMediar o conflito entre Noxus e Ionia."
+      }
+    ],
+    "custom": [
+      {
+        "tipo": "Área de texto",
+        "nome": "Regras e recursos adicionais",
+        "valor": "Pontos de concentração: 40/40.\nPontos espirituais: 3×Sabedoria + 40 (64/64).\nAção de reação: Sabedoria (8/8).\nBônus de proficiência: metade do atributo utilizado.\nInventário: capacidade indicada como 5× Força ou Constituição; Força não informada.\nPerícia: Medicina +2."
+      }
+    ],
+    "locais": [],
+    "missoes": [
+      {
+        "status": "Concluída"
+      }
+    ],
+    "equip": [
+      {
+        "nome": "armadura leve estelar",
+        "tipo": "leve",
+        "defesa": "+3",
+        "peso": "0",
+        "efeitos": "+20 hp",
+        "descricao": "uma armadura forjada pelo melhor ferreirp da existencia",
+        "obs": "foda"
+      }
+    ],
+    "diario": [],
+    "npcs": [],
+    "moedas": [
+      {
+        "tipo": "Prata",
+        "quantidade": "37"
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Medicina",
+        "bonus": "+2"
+      }
+    ]
+  }
+}
